@@ -1,5 +1,50 @@
+
+$button-width: 75px;
+$large-button: $button-width * 2;
+
+#calculator {
+  position: relative;
+  width: 300px;
+  
+}
+
+#display {
+  
+  text-align: right;
+}
+.output {
+  min-height: 20px;
+}
+
+.input {
+  min-height: 30px;
+}
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+button {
+  
+  width: $button-width;
+  height: 65px;
+}
+
+#clear, #zero {
+  width: $large-button;
+  grid-column: 1 / span 2;
+}
+
+#equals {
+  grid-column: 4; 
+  grid-row: 4 / span 2;
+  
+  height: 130px;
+  
+}
+
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
