@@ -2,18 +2,29 @@
 $button-width: 75px;
 $large-button: $button-width * 2;
 
+
+body {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+
 #calculator {
   position: relative;
   width: 300px;
+  height: min-content;
+  border-radius: 5px;
   
 }
 
 #display {
-  
+  padding: 10px;
   text-align: right;
+
 }
-.output {
-  min-height: 20px;
+.expression {
+  text-align: right;
+  min-height: 24px;
 }
 
 .input {
@@ -27,6 +38,7 @@ button {
   
   width: $button-width;
   height: 65px;
+  border-radius: 5px;
 }
 
 #clear, #zero {
@@ -45,39 +57,14 @@ button {
 .App {
   text-align: center;
   display: flex;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
+   
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
