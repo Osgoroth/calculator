@@ -90,7 +90,7 @@ function App() {
   function handleOperator(e) {
     const param = e.target.value;
     const lastChar = expression[expression.length - 1];
-    const regex = /[+\-*\/]/;
+    const regex = /[+\-*/]/;
 
     //if the user has summed the calculation aleady, set the expression to the input (answer from prev expression) and the button they pressed
     // set input to param just like a normal calculation
@@ -134,12 +134,10 @@ function App() {
   }
 
   function handleSum() {
-    //then calculate
     const sum = eval(expression);
-    // console.log(sum);
+
     setExpression(expression + "=" + sum);
     setInput(sum);
-    // console.log(expression);
   }
 
   function handleClear() {
