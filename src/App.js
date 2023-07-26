@@ -89,12 +89,34 @@ function App() {
 
   function handleOperator(e) {
     const param = e.target.value;
+    const lastChar = expression[expression.length - 1];
+    const regex = /[+\-*\/]/;
+
+    //if the user has summed the calculation aleady, set the expression to the input (answer from prev expression) and the button they pressed
+    // set input to param just like a normal calculation
     if (expression.includes("=")) {
       setExpression(input + param);
       setInput(param);
     } else {
-      setExpression(expression + param);
-      setInput(param);
+      // the previous value was not an operator
+      if (!regex.test(lastChar)) {
+        // append the new operator
+        setExpression(expression + param);
+        setInput(param);
+      } else {
+        // the previous value was an operator but not "-" and the user pressed "-" then keep it
+        if (lastChar !== "-" && param === "-") {
+          setExpression(expression + param);
+        } else if (param !== "-" && lastChar === "-") {
+          // if the user presses any operator thats not "-" and the last operator is "-" replace all previous operators with the new one
+          setExpression(expression.slice(0, -2) + param);
+          setInput(param);
+        } else {
+          //if the user typed any operator thats not  '-' or '=' and the last operator is not '-' we keep the newest operator
+          setExpression(expression.slice(0, -1) + param);
+        }
+      }
+      //if the previous value input is also an operator...
     }
   }
   function handleNumber(e) {
@@ -112,11 +134,12 @@ function App() {
   }
 
   function handleSum() {
+    //then calculate
     const sum = eval(expression);
-    console.log(sum);
+    // console.log(sum);
     setExpression(expression + "=" + sum);
     setInput(sum);
-    console.log(expression);
+    // console.log(expression);
   }
 
   function handleClear() {
