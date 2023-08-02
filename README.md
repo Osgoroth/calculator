@@ -1,3 +1,7 @@
+# Javascript Calculator
+
+![calculator](https://github.com/Osgoroth/calculator/assets/46662617/1d0fadbc-371b-4c59-9488-d3d23ca609f1)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
