@@ -1,6 +1,7 @@
 # Javascript Calculator
 
-![calculator](https://github.com/Osgoroth/calculator/assets/46662617/1d0fadbc-371b-4c59-9488-d3d23ca609f1)
+![calculator](https://github.com/Osgoroth/calculator/assets/46662617/809e51fa-0ce7-49b5-a99c-fd33a00872b3)
+
 
 # Getting Started with Create React App
 
