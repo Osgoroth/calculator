@@ -22,6 +22,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import "./fonts/Digital7Mono.ttf";
 
 ReactDOM.render(
   <React.StrictMode>
